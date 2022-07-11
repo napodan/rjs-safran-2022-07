@@ -1,0 +1,22 @@
+.Button {
+    border: none;
+    border-radius: 8px;
+    padding:8px 10px ;
+    margin-bottom: 20px;
+    margin-right: 12px;
+    box-shadow: 15px 20px 17px grey;
+
+    font-size: larger;
+    font-weight:900 ;
+}
+
+.Button:hover{
+    border: ridge;
+    box-shadow: 10px 12px 17px grey;
+
+}
+
+.Button.clicked{
+    border: outset;
+    box-shadow: 5px 5px 17px grey;
+}
