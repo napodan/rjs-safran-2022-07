@@ -1,1 +1,6 @@
-.FlexW {}
+.FlexW {
+    display:flex;
+}
+.FlexW>*:first-child{
+    flex-grow: 1;
+}

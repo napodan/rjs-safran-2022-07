@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import TchatUser from "../TchatUser/TchatUser";
 import style from "./TchatUsers.module.css";
 /**
  * interface du composant TchatUsers
@@ -9,13 +10,17 @@ export interface ITchatUsersProps {}
  */
 const tchatUsersInitialState = {};
 const TchatUsers: React.FC<ITchatUsersProps> = (props) => {
-  const [state, setstate] = useState(tchatUsersInitialState);
+  /*const [state, setstate] = useState(tchatUsersInitialState);
   useEffect(() => {
     console.log("update/mount");
 
     return () => {};
-  }, [state]);
-  return <div className={style.TchatUsers} data-testid="TchatUsers">tchatUsers</div>;
+  }, [state]);*/
+  return (
+    <div className={style.TchatUsers} data-testid="TchatUsers">
+      <TchatUser />
+    </div>
+  );
 };
 
 export default TchatUsers;
