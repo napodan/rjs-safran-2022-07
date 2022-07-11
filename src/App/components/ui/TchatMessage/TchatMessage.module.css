@@ -1,1 +1,9 @@
-.TchatMessage {}
+.TchatMessage {
+    margin-bottom: 5px;
+    border-radius: 7px;
+    background-color: white;
+    padding:15px 5px
+}
+.header{width:240px;text-align: center; vertical-align: top; display: inline-block;}
+.textMessage{width: calc( 100% - 240px); display: inline-block;}
+br{margin-bottom: 15px;}

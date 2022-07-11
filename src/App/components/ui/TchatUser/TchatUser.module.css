@@ -1,1 +1,7 @@
-.TchatUser {}
+.TchatUser {
+    padding:5px 15px;
+}
+.nick{
+    font-weight: 900;
+    font-size: larger;
+}

@@ -5,7 +5,7 @@ export default {
   title: "TchatUsers",
 };
 
-export const Default = () => <TchatUsers />;
+export const Default = () => <TchatUsers users={[]} />;
 
 Default.story = {
   name: 'default',

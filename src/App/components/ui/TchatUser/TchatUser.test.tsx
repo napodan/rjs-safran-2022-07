@@ -5,7 +5,7 @@ import TchatUser from './TchatUser';
 
 describe('<TchatUser />', () => {
   test('it should mount', () => {
-    render(<TchatUser />);
+    render(<TchatUser user={{id:0,fullName:"", img:null,nick:'',timeLastAction:new Date().toString()}} />);
     
     const tchatUser = screen.getByTestId('TchatUser');
 

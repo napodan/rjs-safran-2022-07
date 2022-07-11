@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from "react";
+import Moment from "react-moment";
+import IMessage from "../../../interfaces/IMessage";
+import IUser from "../../../interfaces/IUsers";
+import AvatarUser from "../AvatarUser/AvatarUser";
 import style from "./TchatMessage.module.css";
 /**
  * interface du composant TchatMessage
  */
-export interface ITchatMessageProps {}
-/**
- * etat initial des props du composant TchatMessage
- */
-const tchatMessageInitialState = {};
-const TchatMessage: React.FC<ITchatMessageProps> = (props) => {
-  const [state, setstate] = useState(tchatMessageInitialState);
-  useEffect(() => {
-    console.log("update/mount");
+export interface ITchatMessageProps {
+  message: IMessage;
+  user: IUser;
+}
 
-    return () => {};
-  }, [state]);
-  return <div className={style.TchatMessage} data-testid="TchatMessage">tchatMessage</div>;
+const TchatMessage: React.FC<ITchatMessageProps> = (props) => {
+  return (
+    <div className={style.TchatMessage} data-testid="TchatMessage">
+      <div className={style.header}>
+        <AvatarUser user={props.user} />
+        <br/>
+        <span style={{ fontStyle: "italic" }}>
+          <Moment format="YYYY/MM/DD HH:mm:ss">{props.message.dt}</Moment>
+        </span>
+        : </div><div className={style.textMessage}>{props.message.text}</div>
+    </div>
+  );
 };
 
 export default TchatMessage;

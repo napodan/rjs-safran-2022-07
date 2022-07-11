@@ -5,7 +5,7 @@ import TchatMessage from './TchatMessage';
 
 describe('<TchatMessage />', () => {
   test('it should mount', () => {
-    render(<TchatMessage />);
+    render(<TchatMessage message={{id:0,text:'',dt:new Date().toString(), from:0}} user={{id:0, nick:'',fullName:'',img:null,timeLastAction:new Date().toString()}} />);
     
     const tchatMessage = screen.getByTestId('TchatMessage');
 
