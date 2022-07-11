@@ -1,0 +1,8 @@
+.FlexW {
+  display: flex;
+  flex-direction: column;
+}
+
+.FlexW > *:first-child {
+  flex-grow: 1;
+}

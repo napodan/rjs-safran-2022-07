@@ -1,0 +1,9 @@
+.FlexH {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.FlexH > *:first-child {
+  flex-grow: 1;
+}
