@@ -1,19 +1,11 @@
 import React from "react";
 import "./App.css";
-import Button from "./App/components/Button/Button";
+import Tchat from "./components/hook/Tchat/Tchat";
 
 function App() {
   return (
     <div className="App">
-      <Button
-        onclick={(arg: String) => {
-          console.log(arg);
-        }}
-      >
-        Benjamin
-        <br />
-        Button
-      </Button>
+      <Tchat />
     </div>
   );
 }

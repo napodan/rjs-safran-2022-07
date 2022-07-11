@@ -1,13 +1,13 @@
 import React, { lazy, Suspense } from "react";
 
-const LazyTchatMessages = lazy(() => import("./TchatMessages"));
+const LazyTchatUsers = lazy(() => import("./TchatUsers"));
 
-const TchatMessages = (
+const TchatUsers = (
   props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
 ) => (
   <Suspense fallback={null}>
-    <LazyTchatMessages users={[]} {...props} />
+    <LazyTchatUsers users={[]} {...props} />
   </Suspense>
 );
 
-export default TchatMessages;
+export default TchatUsers;

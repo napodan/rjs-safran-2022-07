@@ -1,6 +1,5 @@
 .FlexW {
   display: flex;
-  flex-direction: column;
 }
 
 .FlexW > *:first-child {
