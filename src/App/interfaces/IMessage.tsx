@@ -1,6 +1,7 @@
 export default interface IMessage{
-    id:number,
-    text:string,
-    from: number,
+    id?:number
+    text:string
+    to?:number
+    from: number
     dt:string
 }
