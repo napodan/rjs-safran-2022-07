@@ -3,10 +3,12 @@ import Button from './Button';
 
 export default {
   title: "Button",
+  component:Button
 };
 
-export const Default = () => <Button onclick={()=>{}}>children</Button>;
+const Template=(arg)=><Button {...arg}/>
 
-Default.story = {
-  name: 'default',
-};
+export const Default = Template.bind({}); 
+Default.args = { 
+  onclick: ()=>{console.log('clicked on')}, 
+}; 

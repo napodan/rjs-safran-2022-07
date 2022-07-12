@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "id": 0,
+      "text": "Hello",
+      "from": 0,
+      "dt": "Tue Jul 12 2022 16:24:17 GMT+0200 (heure d’été d’Europe centrale)"
+    },
+    {
+      "id": 1,
+      "text": "de lu",
+      "from": 1,
+      "dt": "Tue Jul 12 2022 16:24:17 GMT+0200 (heure d’été d’Europe centrale)"
+    },
+    {
+      "id": 2,
+      "text": "Comment",
+      "from": 0,
+      "dt": "Tue Jul 12 2022 16:24:17 GMT+0200 (heure d’été d’Europe centrale)"
+    },
+    {
+      "id": 3,
+      "text": "ca",
+      "from": 1,
+      "to": 0,
+      "dt": "Tue Jul 12 2022 16:24:17 GMT+0200 (heure d’été d’Europe centrale)"
+    },
+    {
+      "id": 4,
+      "text": "va",
+      "from": 0,
+      "dt": "Tue Jul 12 2022 16:24:17 GMT+0200 (heure d’été d’Europe centrale)"
+    }
+  ],
+  "users": [
+    {"id":0, "nick":"champix","fullName":"Alexandre d", "timeLastAction":"2022-07-09T00:00:01" },
+    {"id":1, "nick":"PY","fullName":"pierre yves", "timeLastAction":"2022-07-09T00:00:01" },
+    {"id":2, "nick":"jojo","fullName":"José", "timeLastAction":"2022-07-09T00:00:01" }
+
+  ]
+}

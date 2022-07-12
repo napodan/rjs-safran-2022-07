@@ -14,7 +14,7 @@ const AvatarUser: React.FC<IAvatarUserProps> = (props) => {
   src={props.user.img ? props.user.img : undefined}
   sx={{ display: "inline", marginRight:'10px', height:70, width:70, padding:0.5 }}
 >
-  {props.user.nick.substring(0, 2)}
+  {props.user.nick.substring(0, 2)} 
 </Avatar></div>;
 };
 
