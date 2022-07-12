@@ -8,10 +8,10 @@ interface ITFProps {
 export function TF(props: ITFProps) {
   const [internalValue, setinternalValue] = useState(props.value);
   const [isValidInput, seisValidInput] = useState(false);
-
+  const propsOnChange=props.onChange;
   useEffect(() => {
     props.onChange(internalValue, checkValueQuality(internalValue));
-  }, [props, internalValue]);
+  }, [internalValue]);
   function checkValueQuality(inputValue: string) {
     const regex = /0\d\d{8}/gm;
     let isValidData = false;
