@@ -1,0 +1,7 @@
+.Header {
+  font-style: italic;
+  font-weight: 900;
+}
+.Header > svg {
+  height: 30px;
+}
