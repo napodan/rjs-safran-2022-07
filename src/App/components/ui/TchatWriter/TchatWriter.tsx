@@ -63,11 +63,11 @@ const TchatWriter: React.FC<ITchatWriterProps> = (props) => {
             </FormControl> */}
           </div>
           <UserSelect
-            value={selectedUser}
+            value={selectedUser ?? undefined}
             users={props.users}
             onChange={(value: number | undefined, isValid: boolean) => {
               console.log(value);
-              dispatch(selectUser(value ?? 0));
+              dispatch(selectUser(value ?? null));
               // setstate({ ...state, to: value });
               setisValidFormDatas(isValid);
             }}
