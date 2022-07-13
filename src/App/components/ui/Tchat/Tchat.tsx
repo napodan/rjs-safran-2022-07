@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import IMessage from "../../../interfaces/IMessage";
+
 import IUser from "../../../interfaces/IUsers";
 import FlexH from "../../layout/FlexH/FlexH";
 import FlexW from "../../layout/FlexW/FlexW";
 import TchatMessages from "../TchatMessages/TchatMessagesConnected";
 
-import TchatUsers from "../TchatUsers/TchatUsers";
-import TchatWriter from "../TchatWriter/TchatWriter";
+
+import TchatUsersConnected from "../TchatUsers/TchatUsersConnected";
+import TchatWriterConnected from "../TchatWriter/TchatWriterConnected";
 import style from "./Tchat.module.css";
 /**
  * interface du composant Tchat
@@ -45,14 +46,9 @@ class Tchat extends React.Component<ITchatProps, ITchatState> {
         <FlexH>
           <FlexW>
             <TchatMessages />
-            <TchatUsers users={this.state.users}  />
+            <TchatUsersConnected   />
           </FlexW>
-          <TchatWriter
-            users={this.state.users}
-            onMesageSent={(message: IMessage) => {
-              console.log(message);
-            }}
-          />
+          <TchatWriterConnected/>
         </FlexH>
       </div>
     );

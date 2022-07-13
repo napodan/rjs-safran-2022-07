@@ -15,13 +15,13 @@ const UserSelect:React.FC<IUserSelectProps>=(props)=>{
       id="demo-simple-select"
       className={style.userSelect}
        sx={{ height: 30 }}
-      value={props.value}
+      value={undefined===props.value?'all':props.value}
       onChange={evt=>{
         let value=Number(evt.target.value)
        props.onChange(isNaN(value)?undefined:value,true)
     }}
     >
-      <MenuItem key={"suall"} value={undefined}>
+      <MenuItem key={"suall"} value={'all'}>
         All
       </MenuItem>
       {props.users.map((u) => (

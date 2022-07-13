@@ -4,7 +4,7 @@ import IMessage from '../../../interfaces/IMessage'
 import TchatWriter from './TchatWriter'
 
 export default function TchatWriterConnected() {
-  const users=useSelector((s:any)=>s.users.value)  
+  const users=useSelector((s:any)=>s.users.values)  
   return (
     <TchatWriter users={users} onMesageSent={(message:IMessage)=>{
 
