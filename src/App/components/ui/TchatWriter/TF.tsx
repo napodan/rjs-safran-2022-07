@@ -8,7 +8,6 @@ interface ITFProps {
 export function TF(props: ITFProps) {
   const [internalValue, setinternalValue] = useState(props.value);
   const [isValidInput, seisValidInput] = useState(false);
-  const propsOnChange=props.onChange;
   useEffect(() => {
     props.onChange(internalValue, checkValueQuality(internalValue));
   }, [internalValue]);
@@ -23,6 +22,7 @@ export function TF(props: ITFProps) {
   }
   return (
     <input
+    data-testid="TF"
       type="text"
       defaultValue={props.value}
       style={{

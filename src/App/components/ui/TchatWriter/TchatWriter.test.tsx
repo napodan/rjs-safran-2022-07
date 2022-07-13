@@ -5,7 +5,7 @@ import TchatWriter from './TchatWriter';
 
 describe('<TchatWriter />', () => {
   test('it should mount', () => {
-    render(<TchatWriter users={[]} onMesageSent={(e:any)=>{}} />);
+    render(<TchatWriter users={[]}  onMesageSent={()=>{}} />);
     
     const tchatWriter = screen.getByTestId('TchatWriter');
 
