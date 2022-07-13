@@ -8,9 +8,12 @@ import {
 } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 
-import React, {  useState } from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import IMessage from "../../../interfaces/IMessage";
 import IUser, { DUMMY_USER } from "../../../interfaces/IUsers";
+import { selectUser } from "../../../store/selectedUserSlice";
+import { TRootState } from "../../../store/store";
 import FlexW from "../../layout/FlexW/FlexW";
 import AvatarUser from "../AvatarUser/AvatarUser";
 import style from "./TchatWriter.module.css";
@@ -28,13 +31,16 @@ export interface ITchatWriterProps {
  */
 const tchatWriterInitialState: IMessage = {
   text: "014631264",
-  to: undefined,
   from: 0,
   dt: new Date(0).toString(),
 };
 const TchatWriter: React.FC<ITchatWriterProps> = (props) => {
+  const dispatch = useDispatch();
   const [state, setstate] = useState(tchatWriterInitialState);
   const [isValidFormDatas, setisValidFormDatas] = useState(false);
+  const selectedUser = useSelector(
+    (state: TRootState) => state.selectedUserReducer
+  );
   return (
     <Box className={style.TchatWriter} data-testid="TchatWriter">
       <form
@@ -49,7 +55,7 @@ const TchatWriter: React.FC<ITchatWriterProps> = (props) => {
               value={state.text}
               onChange={(val: string, valid: boolean) => {
                 setstate({ ...state, text: val });
-                setisValidFormDatas( valid);
+                setisValidFormDatas(valid);
               }}
             />
             {/* <FormControl sx={{ width: "calc(100% - 80px)" }}>
@@ -57,10 +63,12 @@ const TchatWriter: React.FC<ITchatWriterProps> = (props) => {
             </FormControl> */}
           </div>
           <UserSelect
-            value={state.to}
+            value={selectedUser}
             users={props.users}
             onChange={(value: number | undefined, isValid: boolean) => {
-              setstate({ ...state, to: value });
+              console.log(value);
+              dispatch(selectUser(value ?? 0));
+              // setstate({ ...state, to: value });
               setisValidFormDatas(isValid);
             }}
           />
