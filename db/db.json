@@ -33,9 +33,24 @@
     }
   ],
   "users": [
-    {"id":0, "nick":"champix","fullName":"Alexandre d", "timeLastAction":"2022-07-09T00:00:01" },
-    {"id":1, "nick":"PY","fullName":"pierre yves", "timeLastAction":"2022-07-09T00:00:01" },
-    {"id":2, "nick":"jojo","fullName":"José", "timeLastAction":"2022-07-09T00:00:01" }
-
-  ]
+    {
+      "id": 0,
+      "nick": "champix",
+      "fullName": "Alexandre d",
+      "timeLastAction": "2022-07-09T00:00:01"
+    },
+    {
+      "id": 1,
+      "nick": "PY",
+      "fullName": "pierre yves",
+      "timeLastAction": "2022-07-09T00:00:01"
+    },
+    {
+      "id": 2,
+      "nick": "jojo",
+      "fullName": "José",
+      "timeLastAction": "2022-07-09T00:00:01"
+    }
+  ],
+  "posts": []
 }
