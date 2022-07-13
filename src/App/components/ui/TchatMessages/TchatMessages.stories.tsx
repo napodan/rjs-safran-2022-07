@@ -1,12 +1,12 @@
 /* eslint-disable */
-import TchatMessages from './TchatMessages';
+import TchatMessages from "./TchatMessages";
 
 export default {
   title: "TchatMessages",
 };
 
-export const Default = () => <TchatMessages users={[]} />;
+export const Default = () => <TchatMessages messages={[]} users={[]} />;
 
 Default.story = {
-  name: 'default',
+  name: "default",
 };

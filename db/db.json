@@ -1,0 +1,25 @@
+{
+  "messages": [
+    { "id": 0, "text": "hello", "from": 0, "dt": "XXXX" },
+    { "id": 1, "text": "de lu", "from": 1, "dt": "YYYY" },
+    { "id": 2, "text": "comment", "from": 0, "dt": "ZZZZ" },
+    { "id": 3, "text": "ca", "from": 1, "to": 0, "dt": "AAAA" },
+    { "id": 4, "text": "va", "from": 0, "dt": "BBBB" }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "nick": "champix",
+      "fullName": "Alex champix",
+      "img": null,
+      "timeLastAction": "DDDD"
+    },
+    {
+      "id": 1,
+      "nick": "Alex",
+      "fullName": "Alexandre",
+      "img": null,
+      "timeLastAction": "CCCC"
+    }
+  ]
+}

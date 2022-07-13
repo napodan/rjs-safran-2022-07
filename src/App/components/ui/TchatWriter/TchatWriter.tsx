@@ -32,13 +32,10 @@ const tchatWriterInitialState: IMessage = {
 };
 const TchatWriter: React.FC<ITchatWriterProps> = (props) => {
   const [state, setstate] = useState(tchatWriterInitialState);
-  
-  
+
   return (
     <Box className={style.TchatWriter} data-testid="TchatWriter">
-      <form
-         
-      >
+      <form>
         <FlexW>
           <div>
             <AvatarUser user={DUMMY_USER} />
@@ -48,7 +45,10 @@ const TchatWriter: React.FC<ITchatWriterProps> = (props) => {
                 variant="standard"
                 className={style.messageField}
                 sx={{ height: 45 }}
-                 
+                value={state.text}
+                onChange={(evt) => {
+                  setstate({ ...state, text: evt.target.value });
+                }}
               />
             </FormControl>
           </div>
@@ -56,8 +56,7 @@ const TchatWriter: React.FC<ITchatWriterProps> = (props) => {
             <Select
               id="demo-simple-select"
               className={style.userSelect}
-               sx={{ height: 30 }}
-              
+              sx={{ height: 30 }}
             >
               <MenuItem key={"suall"} value={-1}>
                 All
